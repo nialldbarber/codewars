@@ -6,8 +6,7 @@ import (
 )
 
 func Disemvowel(comment string) string {
-	vowels := []string{"a", "A", "e", "E", "i", "I", "o", "O", "u", "U"}
-	for _, letter := range vowels {		
+	for _, letter := range vowels.Vowels {		
 		comment = strings.ReplaceAll(comment, string(letter), "")
 	}
 	return comment
