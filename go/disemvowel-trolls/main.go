@@ -6,19 +6,14 @@ import (
 )
 
 func Disemvowel(comment string) string {
-	outcome := []string{}
-	vowels := []string{"a", "e", "i", "o", "u"}
-	splitStrings := strings.Split(comment, "")
-	for _, s1 := range splitStrings {
-		for _, s2 := range vowels {
-			if s2 == s1 {
-				outcome = append(outcome, s1)
-			}
-		}
+	vowels := []string{"a", "A", "e", "E", "i", "I", "o", "O", "u", "U"}
+	for _, letter := range vowels {		
+		comment = strings.ReplaceAll(comment, string(letter), "")
 	}
-	return strings.Join(outcome, "")
+	return comment
 }
 
 func main() {
 	fmt.Println(Disemvowel("hello"))
+	fmt.Println(Disemvowel("this is a test LOL, HAppy daYs"))
 }
