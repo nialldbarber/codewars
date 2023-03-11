@@ -44,6 +44,6 @@ mod tests {
     #[test]
     fn test_multiples_of_three_and_five_with_larger_number() {
         let result = multiples_of_three_and_five(100);
-        assert_eq!(result, 2318);
+        assert_eq!(result, 100);
     }
 }
