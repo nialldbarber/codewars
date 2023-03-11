@@ -1,7 +1,3 @@
-package main
-
-import "fmt"
-
 /*
 	If we list all the natural numbers below
 	10 that are multiples of 3 or 5, we get
@@ -18,26 +14,6 @@ import "fmt"
 	3 and 5, only count it once.
 */
 
-func Multiple3And5(number int) int {
-	total := 0
-	multiples := []int{}
-
-	for i := 0; i < number; i++ {
-		if i % 3 == 0 {
-			multiples = append(multiples, i)
-		} else if i % 5 == 0 {
-			multiples = append(multiples, i)
-		}
-	}
-
-	for i := 0; i < len(multiples); i++ {
-		total += multiples[i]
-	}
-
-	return total
-}
-
-func main() {
-	result := Multiple3And5(10)
-	fmt.Println(result)
+fn main() {
+    println!("Hello, world!");
 }
